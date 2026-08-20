@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-tajawal), system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    background-color: #ffffff;
+    color: #1e293b;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #0284c7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0369a1;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(239, 68, 68, 0.5); }
+  50% { box-shadow: 0 0 30px rgba(239, 68, 68, 0.9); }
+}
+
+@keyframes pulseWhatsapp {
+  0%, 100% { box-shadow: 0 0 15px rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 0 30px rgba(37, 211, 102, 0.9); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s infinite;
+}
+
+.animate-pulse-whatsapp {
+  animation: pulseWhatsapp 2s infinite;
+}
